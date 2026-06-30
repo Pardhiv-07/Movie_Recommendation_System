@@ -47,7 +47,7 @@ def get_recommendations(movie_title):
     try:
         movie_index = movies[movies['title'] == movie_title].index[0]
         distances = similarity[movie_index]
-        movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:6]
+        movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:11]
 
         recommended_movies = []
         for i in movies_list:

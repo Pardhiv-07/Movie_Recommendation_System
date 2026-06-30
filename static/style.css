@@ -42,31 +42,38 @@ button:hover {
     text-align: left;
 }
 
-/* Switched to Flexbox to perfectly center the 3x2 layout */
+
+/* 5 items per row, 2 rows total */
 .movie-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the bottom 2 items */
-    gap: 30px; /* Increased gap so they don't touch */
+    flex-wrap: wrap;       /* Allows items to move to the next line */
+    justify-content: center; /* Centers the whole block */
+    gap: 20px;            /* Consistent spacing between posters */
     margin-top: 30px;
 }
 
 .movie-card {
     background: #1e1e1e;
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    width: 28%; /* Forces 3 items per row, pushing the rest to the next row */
-    min-width: 250px; /* Ensures they stay large */
+
+    /* 18% width allows for 5 cards (18%*5 = 90%) plus 20px gaps */
+    width: 18%;
+    min-width: 160px; /* Ensures they don't get too small on narrow screens */
+    flex: 0 0 18%;     /* Prevents cards from stretching or shrinking */
 }
 
 .movie-card img {
     width: 100%;
+    height: auto;
     border-radius: 6px;
+    display: block;
 }
 
 .movie-card h4 {
-    font-size: 16px; /* Slightly larger text to match bigger posters */
-    margin: 12px 0 0 0;
-    height: 45px;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    height: 40px;
+    overflow: hidden; /* Prevents long titles from breaking the card layout */
 }
