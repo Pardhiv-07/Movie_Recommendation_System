@@ -1,0 +1,72 @@
+/* Base Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px; /* Increased from 900px to allow bigger posters */
+    margin: auto;
+}
+
+/* Updated to style the new text input instead of the select tag */
+input, button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin: 10px;
+}
+
+input {
+    width: 60%;
+}
+
+button {
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #b20710;
+}
+
+.results-header {
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Switched to Flexbox to perfectly center the 3x2 layout */
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the bottom 2 items */
+    gap: 30px; /* Increased gap so they don't touch */
+    margin-top: 30px;
+}
+
+.movie-card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 28%; /* Forces 3 items per row, pushing the rest to the next row */
+    min-width: 250px; /* Ensures they stay large */
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.movie-card h4 {
+    font-size: 16px; /* Slightly larger text to match bigger posters */
+    margin: 12px 0 0 0;
+    height: 45px;
+}

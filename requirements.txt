@@ -1,0 +1,6 @@
+pandas
+flask
+requests
+scikit-learn
+urllib3
+gunicorn
